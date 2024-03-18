@@ -231,6 +231,7 @@ export const getBarCharts = TryCatch(async (req, res, next) => {
         const today = new Date();
         const sixMonthsAgo = new Date();
         sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+        console.log({ sixMonthsAgo });
         const twelveMonthAgo = new Date();
         twelveMonthAgo.setMonth(twelveMonthAgo.getMonth() - 12);
         const lastSixMonthsAgoProductsPromise = productModel.find({
